@@ -1,26 +1,83 @@
 package com.nexuslink.mydiary;
 
-import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
 
-import com.ashokvarma.bottomnavigation.BottomNavigationBar;
-import com.ashokvarma.bottomnavigation.BottomNavigationItem;
+import com.nexuslink.mydiary.Presenter.IPresenter;
+import com.nexuslink.mydiary.Presenter.PresenterImpl;
+import com.nexuslink.mydiary.View.IView;
+import com.nexuslink.mydiary.View.Item1Fragment;
+import com.nexuslink.mydiary.View.Item3Fragment;
+import com.nexuslink.mydiary.View.Item2Fragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import info.hoang8f.android.segmented.SegmentedGroup;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener,IView{
+    @BindView(R.id.segmented)
+    SegmentedGroup segmentedGroup;
+    @BindView(R.id.button1)
+    RadioButton button1;
+    @BindView(R.id.button2)
+    RadioButton button2;
+    @BindView(R.id.button3)
+    RadioButton button3;
+
+    private IPresenter iPresenter;
+    private Item1Fragment item1Fragment;
+    private Item2Fragment item2Fragment;
+    private Item3Fragment item3Fragment;
+    private FragmentTransaction fragmentTransaction;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        setNavigation();
+        init();
+
     }
 
-    private void setNavigation() {
+    private void init() {
+        button1.setChecked(true);
+        segmentedGroup.setOnCheckedChangeListener(this);
+        iPresenter = new PresenterImpl(this);
+        setDefault();
+    }
 
+    private void setDefault() {
+        item1Fragment = new Item1Fragment();
+        item2Fragment = new Item2Fragment();
+        item3Fragment = new Item3Fragment();
+        fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        iPresenter.changeFragment(item1Fragment);
+    }
+
+    @Override
+    public void change(Fragment fragment) {
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.framlayout,fragment);
+        fragmentTransaction.commit();
+    }
+
+    @Override
+    public void onCheckedChanged(RadioGroup group, int checkedId) {
+        switch (checkedId){
+            case R.id.button1:
+                iPresenter.changeFragment(item1Fragment);
+                break;
+            case R.id.button2:
+                iPresenter.changeFragment(item2Fragment);
+                break;
+            case R.id.button3:
+                iPresenter.changeFragment(item3Fragment);
+                break;
+        }
     }
 }
