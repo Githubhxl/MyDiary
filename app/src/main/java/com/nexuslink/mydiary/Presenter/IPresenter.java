@@ -1,4 +1,4 @@
-package com.nexuslink.mydiary.Presenter;
+package com.nexuslink.mydiary.presenter;
 
 import android.support.v4.app.Fragment;
 

@@ -43,7 +43,7 @@
                 android:id="@+id/diary_title"
                 android:textColor="@color/colorfacebookBlue"
                 android:layout_marginLeft="5dp"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:layout_below="@id/time"
                 android:layout_toRightOf="@id/date"
                 android:text="啊设计计算机"
@@ -52,7 +52,7 @@
             <TextView
                 android:textColor="@color/colorfacebookBlue"
                 android:layout_marginLeft="5dp"
-                android:textSize="15sp"
+                android:textSize="12sp"
                 android:layout_below="@id/diary_title"
                 android:layout_toRightOf="@id/date"
                 android:text="我v可分动词"

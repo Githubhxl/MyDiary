@@ -1,25 +1,26 @@
-package com.nexuslink.mydiary;
+package com.nexuslink.mydiary.view;
 
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 
-import com.nexuslink.mydiary.Presenter.IPresenter;
-import com.nexuslink.mydiary.Presenter.PresenterImpl;
-import com.nexuslink.mydiary.View.IView;
-import com.nexuslink.mydiary.View.Item1Fragment;
-import com.nexuslink.mydiary.View.Item3Fragment;
-import com.nexuslink.mydiary.View.Item2Fragment;
+import com.nexuslink.mydiary.presenter.IPresenter;
+import com.nexuslink.mydiary.presenter.PresenterImpl;
+import com.nexuslink.mydiary.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import info.hoang8f.android.segmented.SegmentedGroup;
 
-public class MainActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener,IView{
+/**
+ * Created by Rye on 2016/12/4.
+ */
+
+
+public class MainActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener,IView {
     @BindView(R.id.segmented)
     SegmentedGroup segmentedGroup;
     @BindView(R.id.button1)
@@ -33,7 +34,6 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
     private Item1Fragment item1Fragment;
     private Item2Fragment item2Fragment;
     private Item3Fragment item3Fragment;
-    private FragmentTransaction fragmentTransaction;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +55,6 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         item1Fragment = new Item1Fragment();
         item2Fragment = new Item2Fragment();
         item3Fragment = new Item3Fragment();
-        fragmentTransaction = getSupportFragmentManager().beginTransaction();
         iPresenter.changeFragment(item1Fragment);
     }
 
