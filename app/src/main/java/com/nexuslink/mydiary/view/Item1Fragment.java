@@ -38,6 +38,7 @@ public class Item1Fragment extends Fragment implements View.OnClickListener {
                 Intent intent = new Intent(getActivity(),MenuActivity.class);
                 startActivity(intent);
                 getActivity().overridePendingTransition(R.anim.myanim,R.anim.myanim);
+                getActivity().finish();
         }
     }
 

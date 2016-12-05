@@ -14,7 +14,7 @@
             android:layout_height="wrap_content">
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="375dp">
+                android:layout_height="365dp">
                 <ImageView
                     android:src="#ffffff"
                     android:layout_width="match_parent"
@@ -67,11 +67,11 @@
 
         <ImageView
             android:id="@+id/edit"
-            android:src="@drawable/edit"
+            android:src="@drawable/add"
             android:layout_weight="1"
             android:layout_gravity="center"
-            android:layout_width="28dp"
-            android:layout_height="28dp" />
+            android:layout_width="19dp"
+            android:layout_height="19dp" />
 
         <ImageView
             android:id="@+id/camera"
