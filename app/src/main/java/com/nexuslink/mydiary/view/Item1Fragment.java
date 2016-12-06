@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import com.nexuslink.mydiary.R;
 
@@ -18,6 +19,7 @@ import com.nexuslink.mydiary.R;
  */
 
 public class Item1Fragment extends Fragment implements View.OnClickListener {
+    private LinearLayout diaryLinear;
 
     @Nullable
     @Override
@@ -25,44 +27,30 @@ public class Item1Fragment extends Fragment implements View.OnClickListener {
         View view = inflater.inflate(R.layout.frag_item1,container,false);
         ImageView menu = (ImageView) view.findViewById(R.id.menu);
         menu.setOnClickListener(this);
-        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.item1_recycler);
-        recyclerView.setAdapter(new DiaryRecyclerAdapter());
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        LinearLayout linearLayout = (LinearLayout) view.findViewById(R.id.month_diary_linear);
+        View view1 = LayoutInflater.from(getContext()).inflate(R.layout.item_month,null);
+        diaryLinear = (LinearLayout) view1.findViewById(R.id.item_diary_linear);
+        linearLayout.addView(LayoutInflater.from(getContext()).inflate(R.layout.item_diary,null));
+
+        linearLayout.addView(view1,0);
+        linearLayout.addView(LayoutInflater.from(getContext()).inflate(R.layout.item_month,null));
+
         return view;
+    }
+
+    private void addDiary(LinearLayout linearLayout) {
+        linearLayout.addView(LayoutInflater.from(getContext()).inflate(R.layout.item_diary,null),0);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.menu:
-                Intent intent = new Intent(getActivity(),MenuActivity.class);
+                /*Intent intent = new Intent(getActivity(),MenuActivity.class);
                 startActivity(intent);
                 getActivity().overridePendingTransition(R.anim.myanim,R.anim.myanim);
-                getActivity().finish();
-        }
-    }
-
-    private class DiaryRecyclerAdapter extends RecyclerView.Adapter<DiaryRecyclerViewHoder> {
-        @Override
-        public DiaryRecyclerViewHoder onCreateViewHolder(ViewGroup parent, int viewType) {
-            View view = LayoutInflater.from(getContext()).inflate(R.layout.item_diary,parent,false);
-            return new DiaryRecyclerViewHoder(view);
-        }
-
-        @Override
-        public void onBindViewHolder(DiaryRecyclerViewHoder holder, int position) {
-
-        }
-
-        @Override
-        public int getItemCount() {
-            return 20;
-        }
-    }
-
-    private class DiaryRecyclerViewHoder extends RecyclerView.ViewHolder{
-        public DiaryRecyclerViewHoder(View itemView) {
-            super(itemView);
+                getActivity().finish();*/
+                addDiary(diaryLinear);
         }
     }
 }

@@ -51,7 +51,6 @@
     </ScrollView>
     <LinearLayout
         android:layout_weight="0"
-        android:layout_below="@id/item1_recycler"
         android:orientation="horizontal"
         android:background="@color/colorfacebookBlue"
         android:layout_width="match_parent"
