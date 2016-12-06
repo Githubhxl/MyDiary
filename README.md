@@ -1,7 +1,6 @@
 # MyDiary
 仿新海诚《你的名字》中MyDiary
 ##开发进度截图(不代表最终版本)
-###个人
 ####原作
 ![image](https://github.com/RUI1806415923/MyDiary/blob/master/screenshot/Screenshot_20161204-233825.png)
 ####开发版
