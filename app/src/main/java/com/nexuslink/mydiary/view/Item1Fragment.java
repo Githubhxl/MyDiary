@@ -48,17 +48,22 @@ public class Item1Fragment extends Fragment implements View.OnClickListener {
         SQLiteDatabase sqLiteDatabase = myDiaryDatabaseHelper.getWritableDatabase();
         Log.d("TAG","SIZE"+sqLiteDatabase.getMaximumSize());
         Cursor cursor = sqLiteDatabase.query("Diary",null,null,null,null,null,null);
-        if(cursor.moveToFirst()){
+        if(cursor.moveToLast()){
             do{
                 View view3 = LayoutInflater.from(getContext()).inflate(R.layout.item_diary,null);
                 TextView title = (TextView) view3.findViewById(R.id.diary_title);
                 TextView content = (TextView) view3.findViewById(R.id.diary_content);
+                TextView date = (TextView) view3.findViewById(R.id.diary_date);
+                TextView weekday = (TextView) view3.findViewById(R.id.diary_weekday);
                 Log.d("TAG", String.valueOf(cursor.getColumnIndex("title")));
                 title.setText(cursor.getString(cursor.getColumnIndex("title")));
                 content.setText(cursor.getString(cursor.getColumnIndex("content")));
+                date.setText(cursor.getString(cursor.getColumnIndex("date")));
+                weekday.setText(cursor.getString(cursor.getColumnIndex("weekday")));
+
                 diaryLinear.addView(view3);
                 /*addDiary(diaryLinear);*/
-            }while (cursor.moveToNext());
+            }while (cursor.moveToPrevious());
         }
         return view;
     }

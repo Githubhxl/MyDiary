@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -24,17 +25,15 @@ import com.nexuslink.mydiary.presenter.IPresenter;
 import com.nexuslink.mydiary.presenter.Item3PresenterImpl;
 import com.nexuslink.mydiary.presenter.PresenterImpl;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-
 /**
  * Created by Rye on 2016/12/3.
  */
 
-public class Item3Fragment extends Fragment implements View.OnClickListener,IItem3View{
+public class Item3Fragment extends Fragment implements View.OnClickListener,IItem3View,IView{
     private EditText editTitle;
     private EditText editeContent;
     private IItem3Presenter presenter;
+    private IPresenter presenterMain;
 
     private TextView test;
     @Nullable
@@ -44,6 +43,7 @@ public class Item3Fragment extends Fragment implements View.OnClickListener,IIte
         editTitle = (EditText) view.findViewById(R.id.edit_title);
         editeContent = (EditText) view.findViewById(R.id.edit_content);
         presenter = new Item3PresenterImpl(this);
+        presenterMain = new PresenterImpl(this);
         //测试
         test = (TextView) view.findViewById(R.id.test);
         test.setOnClickListener(this);
@@ -55,12 +55,15 @@ public class Item3Fragment extends Fragment implements View.OnClickListener,IIte
         switch (v.getId()){
             case R.id.test:
                 presenter.saveDiary(getContext(),editTitle.getText().toString(),editeContent.getText().toString());
-                jumptoItem1Frag();
+                presenterMain.changeFragment(new Item1Fragment());
                 break;
         }
     }
 
-    private void jumptoItem1Frag() {
-        getFragmentManager().beginTransaction().replace(R.id.framlayout,new Item1Fragment()).commit();
+    @Override
+    public void change(Fragment fragment) {
+        FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.framlayout,fragment);
+        fragmentTransaction.commit();
     }
 }

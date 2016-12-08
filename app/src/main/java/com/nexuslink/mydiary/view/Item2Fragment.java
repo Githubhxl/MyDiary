@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.nexuslink.mydiary.R;
+import com.nexuslink.mydiary.data.TimeManager;
 
 import java.sql.Time;
 import java.util.Calendar;
@@ -36,63 +37,11 @@ public class Item2Fragment extends Fragment{
     }
 
     private void setCalendar() {
-        Calendar c = Calendar.getInstance();
-        int month_now = c.get(Calendar.MONTH);
-        int date_now = c.get(Calendar.DATE);
-        int weekend_now = c.get(Calendar.DAY_OF_WEEK);
 
-        month.setText(getMonth(month_now));
-        data.setText(String.valueOf(date_now+""));
-        weekday.setText(getWeekday(weekend_now));
+        month.setText(TimeManager.getMonth());
+        int date = TimeManager.getDate();
+        data.setText(date+"");
+        weekday.setText(TimeManager.getWeekday());
     }
 
-    private String getWeekday(int weekend_now) {
-        switch (weekend_now) {
-            case 1:
-                return "Sunday";
-            case 2:
-                return "Monday";
-            case 3:
-                return "Tuesday";
-            case 4:
-                return "Wednesday";
-            case 5:
-                return "Thursday";
-            case 6:
-                return "Friday";
-            case 7:
-                return "Saturday";
-        }
-        return "null";
-    }
-
-    private String getMonth(int month_now) {
-        switch (month_now){
-            case 1:
-                return "January";
-            case 2:
-                return "February";
-            case 3:
-                return "march";
-            case 4:
-                return "April";
-            case 5:
-                return "May";
-            case 6:
-                return "June";
-            case 7:
-                return "July";
-            case 8:
-                return "August";
-            case 9:
-                return "September";
-            case 10:
-                return "October";
-            case 11:
-                return "December";
-            case 12:
-                return "November";
-        }
-        return "null";
-    }
 }
