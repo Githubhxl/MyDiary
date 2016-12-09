@@ -6,4 +6,6 @@
     <color name="colorIosBlue">#157EFB</color>
     <color name="colorfacebookBlue">#3c5c9d</color>
     <color name="colorfront">#565656</color>
+    <color name="colorRed">#ff4848</color>
+
 </resources>
