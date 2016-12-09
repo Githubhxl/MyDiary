@@ -68,19 +68,15 @@ public class Item1Fragment extends Fragment implements View.OnClickListener {
         return view;
     }
 
-    private void addDiary(LinearLayout linearLayout) {
-        linearLayout.addView(LayoutInflater.from(getContext()).inflate(R.layout.item_diary,null),0);
-    }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.menu:
-                /*Intent intent = new Intent(getActivity(),MenuActivity.class);
+                Intent intent = new Intent(getActivity(),MenuActivity.class);
                 startActivity(intent);
                 getActivity().overridePendingTransition(R.anim.myanim,R.anim.myanim);
-                getActivity().finish();*/
-                addDiary(diaryLinear);
+                getActivity().finish();
         }
     }
 }
