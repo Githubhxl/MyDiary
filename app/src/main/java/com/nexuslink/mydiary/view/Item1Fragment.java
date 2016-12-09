@@ -1,5 +1,6 @@
 package com.nexuslink.mydiary.view;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -39,6 +40,13 @@ public class Item1Fragment extends Fragment implements View.OnClickListener {
 
         View view1 = LayoutInflater.from(getContext()).inflate(R.layout.item_month,null);//月日历
         diaryLinear = (LinearLayout) view1.findViewById(R.id.item_diary_linear);//月日历中查找linear
+        diaryLinear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),DialogActivity.class);
+                startActivity(intent);
+            }
+        });
         linearLayout.addView(view1,0);
 
 
