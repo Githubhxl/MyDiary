@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.bigkoo.alertview.AlertView;
 import com.bigkoo.alertview.OnItemClickListener;
@@ -57,6 +58,7 @@ public class EditActivityForget extends AppCompatActivity implements OnItemClick
         public void onCreateMenu(SwipeMenu swipeLeftMenu, SwipeMenu swipeRightMenu, int viewType) {
             int width = 200;
             int height = ViewGroup.LayoutParams.MATCH_PARENT;
+            {
                 SwipeMenuItem deleteItem = new SwipeMenuItem(EditActivityForget.this)
                         .setBackgroundDrawable(R.color.colorRed)
                         .setText("删除")
@@ -71,13 +73,14 @@ public class EditActivityForget extends AppCompatActivity implements OnItemClick
                         .setWidth(width)
                         .setHeight(height);
                 swipeRightMenu.addMenuItem(deleteItem2);
-            SwipeMenuItem deleteItem3 = new SwipeMenuItem(EditActivityForget.this)
-                    .setBackgroundDrawable(R.color.colorIosYellow)
-                    .setText("编辑")
-                    .setTextColor(Color.WHITE)
-                    .setWidth(width)
-                    .setHeight(height);
-            swipeRightMenu.addMenuItem(deleteItem3);
+                SwipeMenuItem deleteItem3 = new SwipeMenuItem(EditActivityForget.this)
+                        .setBackgroundDrawable(R.color.colorIosYellow)
+                        .setText("编辑")
+                        .setTextColor(Color.WHITE)
+                        .setWidth(width)
+                        .setHeight(height);
+                swipeRightMenu.addMenuItem(deleteItem3);
+            }
         }
     };
 
@@ -89,6 +92,7 @@ public class EditActivityForget extends AppCompatActivity implements OnItemClick
         recyclerItems.setLayoutManager(new LinearLayoutManager(this));
         recyclerItems.setAdapter(itemAdapter = new ItemsAdapter( list));
         recyclerItems.setItemAnimator(new DefaultItemAnimator());
+        recyclerItems.setHasFixedSize(true);
         recyclerItems.setLongPressDragEnabled(true);
         recyclerItems.setSwipeMenuCreator(swipeMenuCreator);
         itemAdapter.setOnItemClickListener(new ItemsViewHolder.OnItemClickListener() {
@@ -216,10 +220,10 @@ public class EditActivityForget extends AppCompatActivity implements OnItemClick
         }
     }
     private static class ItemsViewHolder extends RecyclerView.ViewHolder{
-        private EditText item;
+        private TextView item;
         public ItemsViewHolder(View itemView) {
             super(itemView);
-            item = (EditText) itemView.findViewById(R.id.item);
+            item = (TextView) itemView.findViewById(R.id.item);
         }
         public interface OnItemClickListener{
             void onClick( ItemsViewHolder holder, int position);
