@@ -1,18 +1,19 @@
 # MyDiary
-仿新海诚《你的名字》中MyDiary
+仿新海诚《你的名字》MyDiary
+##开发目的
+###UI上尽量还原+功能上尽量实用
 ##开发进度截图(不代表最终版本)
 ####原作
-![image](https://github.com/RUI1806415923/MyDiary/blob/master/screenshot/Screenshot_20161204-233825.png)
-####开发版
-![image](https://github.com/RUI1806415923/MyDiary/blob/master/screenshot/Screenshot_20161206-211131.png)
-####原作
-![image](https://github.com/RUI1806415923/MyDiary/blob/master/screenshot/Screenshot_20161204-232615.png)
-####开发版
-![image](https://github.com/RUI1806415923/MyDiary/blob/master/screenshot/Screenshot_20161206-211233.png)
-####原作
-![image](https://github.com/RUI1806415923/MyDiary/blob/master/screenshot/Screenshot_20161203-145203.png)
-####开发版
-![image](https://github.com/RUI1806415923/MyDiary/blob/master/screenshot/Screenshot_20161206-212802.png)
-####开发版
-![image](https://github.com/RUI1806415923/MyDiary/blob/master/screenshot/Screenshot_20161206-212707.png)
+![image](https://github.com/RUI1806415923/MyDiary/blob/master/screenshot/ph1)
+![image](https://github.com/RUI1806415923/MyDiary/blob/master/screenshot/ph2)
+![image](https://github.com/RUI1806415923/MyDiary/blob/master/screenshot/ph3)
+####开发进度
+![image](https://github.com/RUI1806415923/MyDiary/blob/master/screenshot/pic1 =1980x1080)
+![image](https://github.com/RUI1806415923/MyDiary/blob/master/screenshot/pic2 =1980x1080)
+![image](https://github.com/RUI1806415923/MyDiary/blob/master/screenshot/pic3 =1980x1080)
+![image](https://github.com/RUI1806415923/MyDiary/blob/master/screenshot/pic4 =1980x1080)
+![image](https://github.com/RUI1806415923/MyDiary/blob/master/screenshot/pic5 =1980x1080)
+![image](https://github.com/RUI1806415923/MyDiary/blob/master/screenshot/pic6 =1980x1080)
+![image](https://github.com/RUI1806415923/MyDiary/blob/master/screenshot/pic7 =1980x1080)
+![image](https://github.com/RUI1806415923/MyDiary/blob/master/screenshot/pic8 =1980x1080)
 ###更多内容，敬请期待
