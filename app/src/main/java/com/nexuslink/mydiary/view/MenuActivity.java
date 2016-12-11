@@ -41,8 +41,7 @@ public class MenuActivity extends AppCompatActivity implements OnSwipeMenuItemCl
         public void onCreateMenu(SwipeMenu swipeLeftMenu, SwipeMenu swipeRightMenu, int viewType) {
             int width = 200;
             int height = ViewGroup.LayoutParams.MATCH_PARENT;
-
-            {
+            if(viewType == TYPENORMAL){
                 SwipeMenuItem addItem = new SwipeMenuItem(MenuActivity.this)
                         .setBackgroundDrawable(R.color.colorfacebookBlue)
                         .setText("添加")
@@ -50,9 +49,8 @@ public class MenuActivity extends AppCompatActivity implements OnSwipeMenuItemCl
                         .setWidth(width)
                         .setHeight(height);
                 swipeLeftMenu.addMenuItem(addItem);
-            }
 
-            {
+
                 SwipeMenuItem deleteItem = new SwipeMenuItem(MenuActivity.this)
                         .setBackgroundDrawable(R.color.colorRed)
                         .setText("删除")
@@ -68,6 +66,7 @@ public class MenuActivity extends AppCompatActivity implements OnSwipeMenuItemCl
                         .setHeight(height);
                 swipeRightMenu.addMenuItem(deleteItem2);
             }
+
         }
     };
 

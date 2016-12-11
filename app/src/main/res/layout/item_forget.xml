@@ -7,7 +7,7 @@
     <LinearLayout
         android:id="@+id/rootview_forget"
         android:layout_width="match_parent"
-        android:layout_height="65dp">
+        android:layout_height="62dp">
         <ImageView
             android:id="@+id/forget_image"
             android:layout_marginLeft="22dp"
