@@ -28,7 +28,6 @@ import com.yanzhenjie.recyclerview.swipe.SwipeMenuItem;
 import com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import butterknife.BindView;
@@ -110,14 +109,6 @@ public class MenuActivity extends AppCompatActivity implements OnSwipeMenuItemCl
     @Override
     public void onItemClick(Closeable closeable, final int adapterPosition, int menuPosition, int direction) {
         closeable.smoothCloseMenu();
-        /*Toast.makeText(MenuActivity.this, "list第" + adapterPosition + "; 右侧菜单第" + menuPosition, Toast.LENGTH_SHORT).show();
-        if(adapterPosition == 0){
-            Intent intent = new Intent(MenuActivity.this,CallActivity.class);
-            startActivity(intent);
-        }else if(adapterPosition == 1){
-            Intent intent = new Intent(MenuActivity.this,MainActivity.class);
-            startActivity(intent);
-        }*/
         if(direction == SwipeMenuRecyclerView.RIGHT_DIRECTION){
             switch (menuPosition){
                 case 0:
@@ -147,7 +138,6 @@ public class MenuActivity extends AppCompatActivity implements OnSwipeMenuItemCl
                         }
                     }).addExtView(view);
                     editAlert.show();
-
                     break;
             }
         }

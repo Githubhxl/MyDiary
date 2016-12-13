@@ -28,6 +28,7 @@ import com.yanzhenjie.recyclerview.swipe.SwipeMenuItem;
 import com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView;
 import com.yanzhenjie.recyclerview.swipe.touch.OnItemMoveListener;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -41,18 +42,12 @@ public class EditActivityForget extends AppCompatActivity implements OnItemClick
     private static final int TYPEADD = 0;
     private static final int TYPENORMAL = 1;
 
+    private AlertView deleteAlert;
+    private AlertView editAlert;
+    private AlertView addAlert;
+
     private ItemsAdapter itemAdapter;
-    private List<String> list = Arrays.asList(
-            "asf","hcas","sakJ","HF","WJ","EK","as","c;k","lask","asf",
-            "asf","hcas","sakJ","HF","WJ","EK","as","c;k","lask","asf",
-            "asf","hcas","sakJ","HF","WJ","EK","as","c;k","lask","asf",
-            "asf","hcas","sakJ","HF","WJ","EK","as","c;k","lask","asf",
-            "asf","hcas","sakJ","HF","WJ","EK","as","c;k","lask","asf",
-            "asf","hcas","sakJ","HF","WJ","EK","as","c;k","lask","asf",
-
-            "asf","hcas","sakJ","HF","WJ","EK","as","c;k","lask",
-            "asf","hcas","sakJ","HF","WJ","EK","as","c;k","lask","ljkFHJ","AJKEFHCJASK","SAJKBJKC");
-
+    private List<String> list = new ArrayList<>();
     private SwipeMenuCreator swipeMenuCreator = new SwipeMenuCreator() {
         @Override
         public void onCreateMenu(SwipeMenu swipeLeftMenu, SwipeMenu swipeRightMenu, int viewType) {
@@ -89,6 +84,11 @@ public class EditActivityForget extends AppCompatActivity implements OnItemClick
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_forget);
         ButterKnife.bind(this);
+
+        // 测试数据
+        list.add("sdkl");
+        list.add("sdk2");list.add("sdk3");list.add("sdk4");list.add("sdkl");list.add("sdk5");list.add("sdk58");
+
         recyclerItems.setLayoutManager(new LinearLayoutManager(this));
         recyclerItems.setAdapter(itemAdapter = new ItemsAdapter( list));
         recyclerItems.setItemAnimator(new DefaultItemAnimator());
@@ -115,23 +115,44 @@ public class EditActivityForget extends AppCompatActivity implements OnItemClick
         });
         recyclerItems.setSwipeMenuItemClickListener(new OnSwipeMenuItemClickListener() {
             @Override
-            public void onItemClick(Closeable closeable, int adapterPosition, int menuPosition, int direction) {
+            public void onItemClick(Closeable closeable, final int adapterPosition, int menuPosition, int direction) {
+                closeable.smoothCloseMenu();
+
                 if(direction == SwipeMenuRecyclerView.RIGHT_DIRECTION){
                     switch (menuPosition){
                         case 0:
-                            new AlertView("编辑1", null, "取消", null, new String[]{"完成"}, EditActivityForget.this,
-                                    AlertView.Style.Alert, EditActivityForget.this).addExtView(LayoutInflater.from(EditActivityForget.this).inflate(R.layout.dialog_additem,null))
-                                    .show();
+                            deleteAlert = new AlertView("提示", "确认删除备忘？", "取消", null, new String[]{"确认"}, EditActivityForget.this,
+                                    AlertView.Style.Alert, new OnItemClickListener() {
+                                @Override
+                                public void onItemClick(Object o, int position) {
+                                    if(position == 0){
+                                        itemAdapter.deleteItem(adapterPosition);
+                                    }
+
+                                }
+                            });
+                            deleteAlert.show();
                             break;
                         case 1:
+                            //完成备忘
                             new AlertView("编辑12", null, "取消", null, new String[]{"完成"}, EditActivityForget.this,
                                     AlertView.Style.Alert, EditActivityForget.this).addExtView(LayoutInflater.from(EditActivityForget.this).inflate(R.layout.dialog_additem,null))
                                     .show();
                             break;
                         case 2:
-                            new AlertView("编辑13", null, "取消", null, new String[]{"完成"}, EditActivityForget.this,
-                                    AlertView.Style.Alert, EditActivityForget.this).addExtView(LayoutInflater.from(EditActivityForget.this).inflate(R.layout.dialog_additem,null))
-                                    .show();
+                            View view = LayoutInflater.from(EditActivityForget.this).inflate(R.layout.dialog_additem,null);
+                            final EditText edit = (EditText) view.findViewById(R.id.edit_item);
+                            edit.setText(list.get(adapterPosition));
+                            editAlert = new AlertView("编辑备忘", null, "取消", null, new String[]{"完成"}, EditActivityForget.this,
+                                    AlertView.Style.Alert, new OnItemClickListener() {
+                                @Override
+                                public void onItemClick(Object o, int position) {
+                                    if (position == 0){
+                                        itemAdapter.changeItem(edit.getText().toString(),adapterPosition);
+                                    }
+                                }
+                            }).addExtView(view);
+                            editAlert.show();
                             break;
 
                     }
@@ -149,6 +170,20 @@ public class EditActivityForget extends AppCompatActivity implements OnItemClick
         private List<String> list;
         private ItemsViewHolder.OnItemClickListener onItemClickListener;
 
+        public void deleteItem(int position){
+            list.remove(position);
+            notifyItemRemoved(position);
+        }
+        public void additem(String s) {
+            list.add(0,s);
+            notifyItemInserted(0);
+        }
+
+        public void changeItem(String s, int adapterPosition) {
+            list.set(adapterPosition,s);
+            notifyDataSetChanged();
+        }
+
         public ItemsAdapter(List<String> list) {
             this.list =list;
         }
@@ -162,7 +197,7 @@ public class EditActivityForget extends AppCompatActivity implements OnItemClick
         @Override
         public RecyclerView.ViewHolder onCompatCreateViewHolder(View realContentView, int viewType) {
             if(viewType == TYPEADD){
-                return new AddViewHolder(LayoutInflater.from(EditActivityForget.this).inflate(R.layout.item_add,null));
+                return new AddViewHolder(LayoutInflater.from(EditActivityForget.this).inflate(R.layout.item_addforget,null));
             }
             return new ItemsViewHolder(realContentView);
         }
@@ -206,15 +241,26 @@ public class EditActivityForget extends AppCompatActivity implements OnItemClick
 
     private class AddViewHolder extends RecyclerView.ViewHolder {
         private ImageView imageView;
+        private View editView;
+
         public AddViewHolder(View realContentView) {
             super(realContentView);
-            imageView  = (ImageView) realContentView.findViewById(R.id.add_items);
+            imageView  = (ImageView) realContentView.findViewById(R.id.add_forget_items);
             imageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    new AlertView("添加", null, "取消", null, new String[]{"完成"}, EditActivityForget.this,
-                            AlertView.Style.Alert, EditActivityForget.this).addExtView(LayoutInflater.from(EditActivityForget.this).inflate(R.layout.dialog_additem,null))
-                            .show();
+                    addAlert = new AlertView("添加", null, "取消", null, new String[]{"完成"}, EditActivityForget.this,
+                            AlertView.Style.Alert, new OnItemClickListener() {
+                        @Override
+                        public void onItemClick(Object o, int position) {
+                            if (position == 0){
+                                EditText edit = (EditText) editView.findViewById(R.id.edit_item);
+                                itemAdapter.additem(edit.getText().toString());
+                            }
+
+                        }
+                    }).addExtView(editView = LayoutInflater.from(EditActivityForget.this).inflate(R.layout.dialog_additem,null));
+                    addAlert.show();
                 }
             });
         }
