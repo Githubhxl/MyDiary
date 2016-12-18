@@ -8,4 +8,6 @@ import android.support.v4.app.Fragment;
 
 public interface IView {
     void change(Fragment fragment);
+    void changeCheck(int i);
+
 }

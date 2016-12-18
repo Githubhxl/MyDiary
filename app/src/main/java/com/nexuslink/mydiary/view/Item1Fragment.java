@@ -31,6 +31,7 @@ public class Item1Fragment extends Fragment implements View.OnClickListener {
 
     @Nullable
     @Override
+
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.frag_item1,container,false);
         ImageView menu = (ImageView) view.findViewById(R.id.menu);

@@ -11,4 +11,5 @@ import com.nexuslink.mydiary.model.DiaryModel;
 
 public interface IPresenter {
     void changeFragment(Fragment fragment);
+    void ItemChange(int i);
 }

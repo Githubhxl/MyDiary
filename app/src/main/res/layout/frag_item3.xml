@@ -5,36 +5,52 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <ScrollView
+        android:scrollbarSize="7dp"
+        android:scrollbarThumbVertical="@color/colorfacebookBlue"
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <LinearLayout
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <EditText
+                android:background="@null"
+                android:layout_margin="5dp"
+                android:textSize="20dp"
+                android:gravity="center"
                 android:id="@+id/edit_title"
-                android:layout_marginTop="8dp"
-                android:layout_marginLeft="12dp"
-                android:layout_marginRight="12dp"
                 android:textColor="@color/colorfacebookBlue"
                 android:hint="输入标题"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"
+                android:src="@color/colorfacebookBlue"
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp" />
+
             <EditText
                 android:layout_weight="1"
                 android:id="@+id/edit_content"
                 android:textSize="17dp"
                 android:textColor="@color/colorfront"
                 android:lineSpacingExtra="5dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginLeft="15dp"
+                android:layout_marginRight="17dp"
+                android:layout_marginLeft="17dp"
                 android:background="@null"
                 android:hint="输入内容"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp" />
         </LinearLayout>
-
     </ScrollView>
     <LinearLayout
         android:layout_weight="0"
@@ -44,38 +60,19 @@
         android:layout_height="45dp">
 
         <ImageView
-            android:id="@+id/menu"
-            android:src="@drawable/menu"
+            android:id="@+id/add_photo"
+            android:src="@drawable/add"
             android:layout_weight="1"
             android:layout_gravity="center"
-            android:layout_width="27dp"
-            android:layout_height="27dp" />
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
 
         <ImageView
-            android:id="@+id/edit"
-            android:src="@drawable/edit"
+            android:id="@+id/finish"
+            android:src="@drawable/finish"
             android:layout_weight="1"
             android:layout_gravity="center"
-            android:layout_width="19dp"
-            android:layout_height="28dp" />
-
-        <ImageView
-            android:id="@+id/camera"
-            android:src="@drawable/camera"
-            android:layout_weight="1"
-            android:layout_gravity="center"
-            android:layout_width="22dp"
-            android:layout_height="22dp" />
-
-        <TextView
-            android:id="@+id/test"
-            android:layout_marginLeft="105dp"
-            android:layout_gravity="center"
-            android:textSize="25sp"
-            android:textColor="#ffffff"
-            android:text="5 entries"
-            android:layout_weight="4"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content" />
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
     </LinearLayout>
 </LinearLayout>

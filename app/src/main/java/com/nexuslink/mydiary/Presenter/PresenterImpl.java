@@ -23,4 +23,9 @@ public class PresenterImpl implements IPresenter{
         iView.change(fragment);
     }
 
+    @Override
+    public void ItemChange(int i) {
+        iView.changeCheck(i);
+    }
+
 }
