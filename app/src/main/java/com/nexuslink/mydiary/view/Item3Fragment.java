@@ -24,6 +24,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -58,7 +59,7 @@ public class Item3Fragment extends Fragment implements View.OnClickListener,IIte
     private int CROP_PHOTO2 = 3;
     private Uri imageUri;
     private Uri imagUri2;
-
+    private View frag3;
     private ImageView finish;
     private ImageView addPhoto;
     @Nullable
@@ -71,13 +72,14 @@ public class Item3Fragment extends Fragment implements View.OnClickListener,IIte
         presenter = new Item3PresenterImpl(this);
         finish = (ImageView) view.findViewById(R.id.finish);
         addPhoto = (ImageView) view.findViewById(R.id.add_photo);
+        frag3 = view.findViewById(R.id.frag3);
         addPhoto.setOnClickListener(this);
         finish.setOnClickListener(this);
         return view;
     }
 
     private void addPic(Drawable drawable) {
-        drawable.setBounds(0, 0, drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
+        drawable.setBounds(0,0,drawable.getIntrinsicWidth()*2, drawable.getIntrinsicHeight()*2);
         int start = editeContent.getSelectionStart();
         SpannableString spannable = new SpannableString(editeContent.getText().insert(editeContent.getSelectionStart(),"[photo]"));
         ImageSpan span = new ImageSpan(drawable, ImageSpan.ALIGN_BASELINE);
