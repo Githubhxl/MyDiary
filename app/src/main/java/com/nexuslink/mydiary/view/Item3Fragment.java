@@ -55,6 +55,7 @@ public class Item3Fragment extends Fragment implements View.OnClickListener,IIte
     private int TAKE_PHOTO = 0;
     private int CROP_PHOTO = 1;
     private int SELECT_PIC = 2;
+    private int CROP_PHOTO2 = 3;
     private Uri imageUri;
     private Uri imagUri2;
 
@@ -77,9 +78,10 @@ public class Item3Fragment extends Fragment implements View.OnClickListener,IIte
 
     private void addPic(Drawable drawable) {
         drawable.setBounds(0, 0, drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
-        SpannableString spannable = new SpannableString(editeContent.getText().toString()+"[photo]");
+        int start = editeContent.getSelectionStart();
+        SpannableString spannable = new SpannableString(editeContent.getText().insert(editeContent.getSelectionStart(),"[photo]"));
         ImageSpan span = new ImageSpan(drawable, ImageSpan.ALIGN_BASELINE);
-        spannable.setSpan(span, editeContent.getText().length(),editeContent.getText().length()+"[photo]".length(), Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
+        spannable.setSpan(span,start,start+ 7, Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
         editeContent.setText(spannable);
     }
 
@@ -149,7 +151,7 @@ public class Item3Fragment extends Fragment implements View.OnClickListener,IIte
             case 1:
                 if(resultCode == getActivity().RESULT_OK){
                     try {
-                        Bitmap bitmap = BitmapFactory.decodeStream(getActivity().getContentResolver().openInputStream(imagUri2));
+                        Bitmap bitmap = BitmapFactory.decodeStream(getActivity().getContentResolver().openInputStream(imageUri));
                         Drawable drawable = new BitmapDrawable(bitmap);
                         addPic(drawable);
                     } catch (FileNotFoundException e) {
@@ -172,11 +174,21 @@ public class Item3Fragment extends Fragment implements View.OnClickListener,IIte
                     Intent intent = new Intent("com.android.camera.action.CROP");
                     intent.setDataAndType(imagUri2,"image/*");
                     intent.putExtra(MediaStore.EXTRA_OUTPUT,imagUri2);
-                    startActivityForResult(intent,CROP_PHOTO);
+                    startActivityForResult(intent,CROP_PHOTO2);
                 }catch (NullPointerException e){
                     e.printStackTrace();
                 }
-
+                break;
+            case 3:
+                if(resultCode == getActivity().RESULT_OK){
+                    try {
+                        Bitmap bitmap = BitmapFactory.decodeStream(getActivity().getContentResolver().openInputStream(imagUri2));
+                        Drawable drawable = new BitmapDrawable(bitmap);
+                        addPic(drawable);
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    }
+                }
                 break;
         }
     }
