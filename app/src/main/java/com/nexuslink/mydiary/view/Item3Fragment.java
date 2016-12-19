@@ -1,10 +1,17 @@
 package com.nexuslink.mydiary.view;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -33,6 +40,10 @@ import com.nexuslink.mydiary.presenter.IPresenter;
 import com.nexuslink.mydiary.presenter.Item3PresenterImpl;
 import com.nexuslink.mydiary.presenter.PresenterImpl;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 /**
  * Created by Rye on 2016/12/3.
  */
@@ -41,6 +52,9 @@ public class Item3Fragment extends Fragment implements View.OnClickListener,IIte
     private EditText editTitle;
     private EditText editeContent;
     private IItem3Presenter presenter;
+    private int TAKE_PHOTO = 0;
+    private int CROP_PHOTO = 1;
+    private Uri imageUri;
 
     private ImageView finish;
     private ImageView addPhoto;
@@ -56,7 +70,6 @@ public class Item3Fragment extends Fragment implements View.OnClickListener,IIte
         addPhoto = (ImageView) view.findViewById(R.id.add_photo);
         addPhoto.setOnClickListener(this);
         finish.setOnClickListener(this);
-
         return view;
     }
 
@@ -80,7 +93,7 @@ public class Item3Fragment extends Fragment implements View.OnClickListener,IIte
                 mainActivity.iPresenter.ItemChange(1);
                 break;
             case R.id.add_photo:
-                new AlertView("添加", "选择照片路径", "取消", null,
+                new AlertView("添加照片",null, "取消", null,
                         new String[]{ "图库中选取", "拍照"},
                         getContext(), AlertView.Style.ActionSheet, new OnItemClickListener() {
                     @Override
@@ -91,10 +104,54 @@ public class Item3Fragment extends Fragment implements View.OnClickListener,IIte
                                 addPic(drawable);
                                 break;
                             case 1:
+                                getDrawable();
                                 break;
                         }
                     }
                 }).show();
+                break;
+        }
+    }
+
+    private Drawable getDrawable() {
+        File file = new File(Environment.getExternalStorageDirectory(),"photo.jpg");
+        if(file.exists()){
+            file.delete();
+        }else {
+            try {
+                file.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        imageUri = Uri.fromFile(file);
+        Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
+        intent.putExtra(MediaStore.EXTRA_OUTPUT,imageUri);
+        startActivityForResult(intent,TAKE_PHOTO);
+        return  null;
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        switch (requestCode){
+            case 0:
+                if(resultCode == getActivity().RESULT_OK){
+                    Intent intent = new Intent("com.android.camera.action.CROP");
+                    intent.setDataAndType(imageUri,"image/*");
+                    intent.putExtra(MediaStore.EXTRA_OUTPUT,imageUri);
+                    startActivityForResult(intent,CROP_PHOTO);
+                }
+                break;
+            case 1:
+                if(resultCode == getActivity().RESULT_OK){
+                    try {
+                        Bitmap bitmap = BitmapFactory.decodeStream(getActivity().getContentResolver().openInputStream(imageUri));
+                        Drawable drawable = new BitmapDrawable(bitmap);
+                        addPic(drawable);
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    }
+                }
                 break;
         }
     }
