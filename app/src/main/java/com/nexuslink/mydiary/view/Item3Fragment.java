@@ -54,7 +54,9 @@ public class Item3Fragment extends Fragment implements View.OnClickListener,IIte
     private IItem3Presenter presenter;
     private int TAKE_PHOTO = 0;
     private int CROP_PHOTO = 1;
+    private int SELECT_PIC = 2;
     private Uri imageUri;
+    private Uri imagUri2;
 
     private ImageView finish;
     private ImageView addPhoto;
@@ -74,7 +76,7 @@ public class Item3Fragment extends Fragment implements View.OnClickListener,IIte
     }
 
     private void addPic(Drawable drawable) {
-        drawable.setBounds(0, 0, drawable.getIntrinsicWidth()* 10/25, drawable.getIntrinsicHeight()* 10/25);
+        drawable.setBounds(0, 0, drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
         SpannableString spannable = new SpannableString(editeContent.getText().toString()+"[photo]");
         ImageSpan span = new ImageSpan(drawable, ImageSpan.ALIGN_BASELINE);
         spannable.setSpan(span, editeContent.getText().length(),editeContent.getText().length()+"[photo]".length(), Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
@@ -100,8 +102,10 @@ public class Item3Fragment extends Fragment implements View.OnClickListener,IIte
                     public void onItemClick(Object o, int position) {
                         switch (position){
                             case 0:
-                                Drawable drawable = getResources().getDrawable(R.drawable.wall);
-                                addPic(drawable);
+                                Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+                                intent.setType("image/*");
+                                startActivityForResult(intent,SELECT_PIC);
+                                /*startActivityForResult(intent,CROP_PHOTO);*/
                                 break;
                             case 1:
                                 getDrawable();
@@ -145,13 +149,34 @@ public class Item3Fragment extends Fragment implements View.OnClickListener,IIte
             case 1:
                 if(resultCode == getActivity().RESULT_OK){
                     try {
-                        Bitmap bitmap = BitmapFactory.decodeStream(getActivity().getContentResolver().openInputStream(imageUri));
+                        Bitmap bitmap = BitmapFactory.decodeStream(getActivity().getContentResolver().openInputStream(imagUri2));
                         Drawable drawable = new BitmapDrawable(bitmap);
                         addPic(drawable);
                     } catch (FileNotFoundException e) {
                         e.printStackTrace();
                     }
                 }
+                break;
+            case 2:
+                /*Uri uri = data.getData();
+                Bitmap bitmap = null;
+                try {
+                    bitmap = BitmapFactory.decodeStream(getActivity().getContentResolver().openInputStream(uri));
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+                Drawable drawable = new BitmapDrawable(bitmap);
+                addPic(drawable);*/
+                try{
+                    imagUri2 = data.getData();
+                    Intent intent = new Intent("com.android.camera.action.CROP");
+                    intent.setDataAndType(imagUri2,"image/*");
+                    intent.putExtra(MediaStore.EXTRA_OUTPUT,imagUri2);
+                    startActivityForResult(intent,CROP_PHOTO);
+                }catch (NullPointerException e){
+                    e.printStackTrace();
+                }
+
                 break;
         }
     }
