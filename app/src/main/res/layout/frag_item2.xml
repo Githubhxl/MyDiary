@@ -50,14 +50,14 @@
         </LinearLayout>
     </ScrollView>
     <LinearLayout
+        android:background="@color/colorfacebookBlue"
         android:layout_weight="0"
         android:orientation="horizontal"
-        android:background="@color/colorfacebookBlue"
         android:layout_width="match_parent"
-        android:layout_height="45dp">
+        android:layout_height="50dp">
 
         <ImageView
-            android:id="@+id/menu"
+            android:id="@+id/menu_calendar"
             android:src="@drawable/menu"
             android:layout_weight="1"
             android:layout_gravity="center"
@@ -80,14 +80,5 @@
             android:layout_width="22dp"
             android:layout_height="22dp" />
 
-        <TextView
-            android:layout_marginLeft="105dp"
-            android:layout_gravity="center"
-            android:textSize="25sp"
-            android:textColor="#ffffff"
-            android:text="5 entries"
-            android:layout_weight="4"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content" />
     </LinearLayout>
 </LinearLayout>

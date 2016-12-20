@@ -10,6 +10,11 @@ import android.widget.TextView;
 import com.nexuslink.mydiary.presenter.IPresenter;
 import com.nexuslink.mydiary.presenter.PresenterImpl;
 import com.nexuslink.mydiary.R;
+import com.nexuslink.mydiary.view.calendar.Item2Fragment;
+import com.nexuslink.mydiary.view.diary.Item3Fragment;
+import com.nexuslink.mydiary.view.entries.Item1Fragment;
+import com.nexuslink.mydiary.view.main.IView;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import info.hoang8f.android.segmented.SegmentedGroup;

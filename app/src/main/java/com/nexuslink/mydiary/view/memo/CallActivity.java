@@ -1,4 +1,4 @@
-package com.nexuslink.mydiary.view;
+package com.nexuslink.mydiary.view.memo;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

@@ -22,11 +22,11 @@
             android:theme="@style/AppTheme"/>
         <activity android:name=".view.MenuActivity"
             android:theme="@style/AppTheme"/>
-        <activity android:name=".view.CallActivity"
+        <activity android:name=".view.memo.CallActivity"
             android:theme="@style/AppTheme"/>
         <activity android:name=".view.EditActivityForget"
             android:theme="@style/AppTheme"/>
-        <activity android:name=".view.DialogActivity"
+        <activity android:name=".view.entries.DialogActivity"
             android:theme="@style/DialogTheme">
         </activity>
     </application>

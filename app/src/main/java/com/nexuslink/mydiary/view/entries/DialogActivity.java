@@ -1,4 +1,4 @@
-package com.nexuslink.mydiary.view;
+package com.nexuslink.mydiary.view.entries;
 
 import android.app.Activity;
 import android.graphics.Color;

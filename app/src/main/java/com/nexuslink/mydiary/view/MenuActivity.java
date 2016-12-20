@@ -19,6 +19,7 @@ import android.widget.Toast;
 import com.bigkoo.alertview.AlertView;
 import com.bigkoo.alertview.OnItemClickListener;
 import com.nexuslink.mydiary.R;
+import com.nexuslink.mydiary.view.memo.CallActivity;
 import com.yanzhenjie.recyclerview.swipe.Closeable;
 import com.yanzhenjie.recyclerview.swipe.OnSwipeMenuItemClickListener;
 import com.yanzhenjie.recyclerview.swipe.SwipeMenu;

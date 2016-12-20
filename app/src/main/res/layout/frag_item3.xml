@@ -6,28 +6,68 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <ScrollView
-        android:scrollbarSize="7dp"
+        android:scrollbarSize="4dp"
         android:scrollbarThumbVertical="@color/colorfacebookBlue"
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <LinearLayout
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <EditText
-                android:background="@null"
-                android:layout_margin="5dp"
-                android:textSize="20dp"
-                android:gravity="center"
-                android:id="@+id/edit_title"
-                android:textColor="@color/colorfacebookBlue"
-                android:hint="输入标题"
+            <android.support.v7.widget.CardView
+                android:layout_margin="8dp"
+                app:cardBackgroundColor="@color/colorfacebookBlue"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <ImageView
+                android:layout_height="150dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/weather"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@android:color/white"
+                        android:text="24"
+                        android:textSize="50dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:layout_below="@id/weather"
+                        android:textColor="@android:color/white"
+                        android:text="chongqing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                </RelativeLayout>
+                <android.support.v7.widget.CardView
+                    android:layout_margin="13dp"
+                    android:layout_gravity="bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:background="@null"
+                        android:layout_margin="5dp"
+                        android:textSize="18dp"
+                        android:textColor="@color/colorfacebookBlue"
+                        android:id="@+id/edit_title"
+                        android:hint="输入标题"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </android.support.v7.widget.CardView>
+                <Spinner
+                    android:entries="@"
+                    android:layout_gravity="end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </Spinner>
+                </android.support.v7.widget.CardView>
+
+            <!--<ImageView
                 android:layout_marginRight="15dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginBottom="10dp"
@@ -35,7 +75,7 @@
                 android:src="@color/colorfacebookBlue"
                 android:layout_width="match_parent"
                 android:layout_height="0.8dp" />
-
+-->
             <EditText
                 android:layout_weight="1"
                 android:id="@+id/edit_content"
@@ -53,27 +93,53 @@
                 android:layout_height="100dp" />
         </LinearLayout>
     </ScrollView>
-    <LinearLayout
+    <RelativeLayout
         android:layout_weight="0"
         android:orientation="horizontal"
-        android:background="@color/colorfacebookBlue"
+        android:background="@drawable/shadow"
         android:layout_width="match_parent"
-        android:layout_height="45dp">
+        android:layout_height="50dp">
+        <LinearLayout
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/location"
+                android:src="@drawable/location"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
 
-        <ImageView
-            android:id="@+id/add_photo"
-            android:src="@drawable/add"
-            android:layout_weight="1"
-            android:layout_gravity="center"
-            android:layout_width="20dp"
-            android:layout_height="20dp" />
+            <ImageView
+                android:layout_marginLeft="40dp"
+                android:id="@+id/add_photo"
+                android:src="@drawable/camera"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+            <ImageView
+                android:layout_marginLeft="40dp"
 
-        <ImageView
-            android:id="@+id/finish"
-            android:src="@drawable/finish"
-            android:layout_weight="1"
-            android:layout_gravity="center"
-            android:layout_width="20dp"
-            android:layout_height="20dp" />
-    </LinearLayout>
+                android:id="@+id/music"
+                android:src="@drawable/music"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+
+            <ImageView
+                android:layout_marginLeft="40dp"
+
+                android:id="@+id/finish"
+                android:src="@drawable/finish"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+        </LinearLayout>
+        </RelativeLayout>
+
 </LinearLayout>

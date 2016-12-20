@@ -10,7 +10,7 @@ import com.nexuslink.mydiary.data.TimeManager;
 import com.nexuslink.mydiary.model.DiaryModel;
 import com.nexuslink.mydiary.model.IModel;
 import com.nexuslink.mydiary.model.ModelImple;
-import com.nexuslink.mydiary.view.IItem3View;
+import com.nexuslink.mydiary.view.diary.IItem3View;
 
 /**
  * Created by Rye on 2016/12/7.

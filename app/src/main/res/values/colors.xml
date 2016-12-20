@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#ffffff</color>
     <color name="colorPrimaryDark">#000000</color>
-    <color name="colorAccent">#3c5c9d</color>
+    <color name="colorAccent">#3c5c9e</color>
     <color name="colorIosBlue">#157EFB</color>
     <color name="colorIosYellow">#565656</color>
     <color name="colorfacebookBlue">#3c5c9d</color>

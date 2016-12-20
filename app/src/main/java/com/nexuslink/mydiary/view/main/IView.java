@@ -1,4 +1,4 @@
-package com.nexuslink.mydiary.view;
+package com.nexuslink.mydiary.view.main;
 
 import android.support.v4.app.Fragment;
 

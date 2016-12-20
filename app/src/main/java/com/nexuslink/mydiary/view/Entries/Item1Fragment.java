@@ -1,14 +1,11 @@
-package com.nexuslink.mydiary.view;
+package com.nexuslink.mydiary.view.entries;
 
-import android.app.Dialog;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,11 +13,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.nexuslink.mydiary.R;
 import com.nexuslink.mydiary.data.DataTools;
 import com.nexuslink.mydiary.data.MyDiaryDatabaseHelper;
+import com.nexuslink.mydiary.view.MenuActivity;
 
 /**
  * Created by Rye on 2016/12/3.
