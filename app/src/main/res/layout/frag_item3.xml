@@ -19,52 +19,100 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <android.support.v7.widget.CardView
-                android:layout_margin="8dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp"
                 app:cardBackgroundColor="@color/colorfacebookBlue"
                 android:layout_width="match_parent"
                 android:layout_height="150dp">
-                <RelativeLayout
+                <LinearLayout
+                    android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
-                    <TextView
-                        android:id="@+id/weather"
-                        android:layout_marginLeft="10dp"
-                        android:textColor="@android:color/white"
-                        android:text="24"
-                        android:textSize="50dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                    <TextView
-                        android:layout_marginLeft="10dp"
-                        android:layout_below="@id/weather"
-                        android:textColor="@android:color/white"
-                        android:text="chongqing"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/weather"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@android:color/white"
+                            android:text="24"
+                            android:textSize="50dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:text="september"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:text="Fri."
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                        <android.support.v7.widget.AppCompatSpinner
+                            android:layout_margin="10dp"
+                            android:id="@+id/weather_spinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </android.support.v7.widget.AppCompatSpinner>
+                        <android.support.v7.widget.AppCompatSpinner
+                            android:layout_margin="10dp"
+                            android:id="@+id/mood_spinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </android.support.v7.widget.AppCompatSpinner>
 
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <android.support.v7.widget.CardView
+                            android:layout_weight="1"
+                            android:layout_margin="13dp"
+                            android:layout_gravity="bottom"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <EditText
+                                android:maxLines="1"
+                                android:background="@null"
+                                android:layout_margin="5dp"
+                                android:textSize="18dp"
+                                android:textColor="@color/colorfacebookBlue"
+                                android:id="@+id/edit_title"
+                                android:hint="输入标题"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </android.support.v7.widget.CardView>
+                        <ImageView
+                            android:layout_marginRight="13dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/bookmark"
+                            android:layout_weight="0"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--<RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
                 </RelativeLayout>
-                <android.support.v7.widget.CardView
-                    android:layout_margin="13dp"
-                    android:layout_gravity="bottom"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <EditText
-                        android:background="@null"
-                        android:layout_margin="5dp"
-                        android:textSize="18dp"
-                        android:textColor="@color/colorfacebookBlue"
-                        android:id="@+id/edit_title"
-                        android:hint="输入标题"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-                </android.support.v7.widget.CardView>
-                <Spinner
-                    android:entries="@"
+
+                <LinearLayout
                     android:layout_gravity="end"
+                    android:orientation="horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-                </Spinner>
+
+                </LinearLayout>
+-->
                 </android.support.v7.widget.CardView>
 
             <!--<ImageView
@@ -90,7 +138,20 @@
                 android:layout_height="match_parent" />
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="100dp" />
+                android:layout_height="match_parent" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/Extra"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_margin="15dp"
+                    android:textSize="16dp"
+                    android:textColor="@color/colorfacebookBlue"
+                    android:text="附件"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
     <RelativeLayout
@@ -105,7 +166,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <ImageView
-                android:id="@+id/location"
+                android:id="@+id/position"
                 android:src="@drawable/location"
                 android:layout_weight="1"
                 android:layout_gravity="center"
@@ -123,7 +184,7 @@
             <ImageView
                 android:layout_marginLeft="40dp"
 
-                android:id="@+id/music"
+                android:id="@+id/voice"
                 android:src="@drawable/music"
                 android:layout_weight="1"
                 android:layout_gravity="center"

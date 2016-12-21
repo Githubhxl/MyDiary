@@ -1,6 +1,7 @@
 package com.nexuslink.mydiary.view.diary;
 
 import android.content.Intent;
+import android.database.DataSetObserver;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
@@ -11,6 +12,7 @@ import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.AppCompatSpinner;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.ImageSpan;
@@ -20,6 +22,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.Spinner;
+import android.widget.SpinnerAdapter;
 
 import com.bigkoo.alertview.AlertView;
 import com.bigkoo.alertview.OnItemClickListener;
@@ -32,6 +37,8 @@ import com.nexuslink.mydiary.view.entries.Item1Fragment;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by Rye on 2016/12/3.
@@ -49,7 +56,15 @@ public class Item3Fragment extends Fragment implements View.OnClickListener,IIte
     private Uri imagUri2;
     private View frag3;
     private ImageView finish;
+    private ImageView position;
+    private ImageView voice;
     private ImageView addPhoto;
+    private AppCompatSpinner moodSpiner;
+    private AppCompatSpinner weatherSpiner;
+    private List<Integer> moodList;
+    private List<Integer> weatherList;
+    private LinearLayout extra;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -59,9 +74,22 @@ public class Item3Fragment extends Fragment implements View.OnClickListener,IIte
         presenter = new Item3PresenterImpl(this);
         finish = (ImageView) view.findViewById(R.id.finish);
         addPhoto = (ImageView) view.findViewById(R.id.add_photo);
+        position = (ImageView) view.findViewById(R.id.position);
+        voice = (ImageView) view.findViewById(R.id.voice);
+        moodSpiner = (AppCompatSpinner) view.findViewById(R.id.mood_spinner);
+        weatherSpiner = (AppCompatSpinner) view.findViewById(R.id.weather_spinner);
+        moodList = Arrays.asList(R.drawable.ic_mood_happy,R.drawable.ic_mood_soso,R.drawable.ic_mood_unhappy);
+        weatherList = Arrays.asList(R.drawable.ic_weather_cloud,R.drawable.ic_weather_foggy,R.drawable.ic_weather_rainy,
+        R.drawable.ic_weather_snowy,R.drawable.ic_weather_sunny,R.drawable.ic_weather_windy);
+
+        extra = (LinearLayout) view.findViewById(R.id.Extra);
+        moodSpiner.setAdapter(new MyMoodAdapter(moodList));
+        weatherSpiner.setAdapter(new MyMoodAdapter(weatherList));
         frag3 = view.findViewById(R.id.frag3);
         addPhoto.setOnClickListener(this);
         finish.setOnClickListener(this);
+        position.setOnClickListener(this);
+        voice.setOnClickListener(this);
         return view;
     }
 
@@ -100,6 +128,42 @@ public class Item3Fragment extends Fragment implements View.OnClickListener,IIte
                                 break;
                             case 1:
                                 getDrawable();
+                                break;
+                        }
+                    }
+                }).show();
+                break;
+            case R.id.voice:
+                new AlertView("添加声音",null, "取消", null,
+                        new String[]{ "录制声音", "添加音乐"},
+                        getContext(), AlertView.Style.ActionSheet, new OnItemClickListener() {
+                    @Override
+                    public void onItemClick(Object o, int position) {
+                        switch (position){
+                            case 0:
+
+                                break;
+                            case 1:
+                                View view = LayoutInflater.from(getContext()).inflate(R.layout.voice_card,null);
+                                extra.addView(view);
+                                break;
+                        }
+                    }
+                }).show();
+                break;
+            case R.id.position:
+                new AlertView("添加位置",null, "取消", null,
+                        new String[]{ "当前位置", "自定义位置"},
+                        getContext(), AlertView.Style.ActionSheet, new OnItemClickListener() {
+                    @Override
+                    public void onItemClick(Object o, int position) {
+                        switch (position){
+                            case 0:
+                                View view = LayoutInflater.from(getContext()).inflate(R.layout.position_card,null);
+                                extra.addView(view);
+                                break;
+                            case 1:
+
                                 break;
                         }
                     }
@@ -179,6 +243,76 @@ public class Item3Fragment extends Fragment implements View.OnClickListener,IIte
                     }
                 }
                 break;
+        }
+    }
+
+    private class MyMoodAdapter implements SpinnerAdapter {
+        private List<Integer> moodList;
+        public MyMoodAdapter(List<Integer> moodList) {
+            this.moodList = moodList;
+
+        }
+
+        @Override
+        public View getDropDownView(int position, View convertView, ViewGroup parent) {
+            View view = LayoutInflater.from(getContext()).inflate(R.layout.item_mood,parent,false);
+            ImageView imageView = (ImageView) view.findViewById(R.id.mood_image);
+            imageView.setImageDrawable(getActivity().getDrawable(moodList.get(position)));
+            return view;
+
+        }
+
+        @Override
+        public void registerDataSetObserver(DataSetObserver observer) {
+
+        }
+
+        @Override
+        public void unregisterDataSetObserver(DataSetObserver observer) {
+
+        }
+
+        @Override
+        public int getCount() {
+            return moodList.size();
+        }
+
+        @Override
+        public Object getItem(int position) {
+            return moodList.get(position);
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return 0;
+        }
+
+        @Override
+        public boolean hasStableIds() {
+            return false;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            View view = LayoutInflater.from(getContext()).inflate(R.layout.item_mood,parent,false);
+            ImageView imageView = (ImageView) view.findViewById(R.id.mood_image);
+            imageView.setImageDrawable(getActivity().getDrawable(moodList.get(position)));
+            return view;
+        }
+
+        @Override
+        public int getItemViewType(int position) {
+            return 0;
+        }
+
+        @Override
+        public int getViewTypeCount() {
+            return 1;
+        }
+
+        @Override
+        public boolean isEmpty() {
+            return false;
         }
     }
 }

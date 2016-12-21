@@ -36,4 +36,5 @@ dependencies {
     compile 'com.yanzhenjie:recyclerview-swipe:1.0.2'
     compile 'com.kaopiz:kprogresshud:1.0.5'
     compile 'com.bigkoo:alertview:1.0.3'
+    compile 'com.zhy:flowlayout-lib:1.0.3'
 }
