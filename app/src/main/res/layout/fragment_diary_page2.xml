@@ -6,20 +6,22 @@
     android:background="@android:color/white"
     android:layout_height="match_parent"
     tools:context="com.nexuslink.mydiary.Fragments.DiaryPage2Fragment">
-    <ScrollView
+    <android.support.v7.widget.CardView
+        app:cardCornerRadius="12dp"
+        android:layout_margin="16dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        android:layout_height="wrap_content">
             <LinearLayout
-                android:layout_marginTop="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginLeft="15dp"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
                     <TextView
                         android:layout_marginLeft="5dp"
                         android:layout_gravity="bottom"
@@ -27,143 +29,142 @@
                         android:text="位置"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
-                <EditText
-                    android:id="@+id/edit_position"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:hint="输入记录位置"
-                    android:textSize="17sp"
-                    android:textColor="@color/colorGray"
-                    android:background="@null"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_marginRight="15dp"
-                android:layout_marginLeft="15dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:layout_marginLeft="5dp"
-                        android:layout_gravity="bottom"
-                        android:textColor="@color/colorPrimary"
-                        android:text="天气"
-                        android:layout_width="wrap_content"
+                    <EditText
+                        android:id="@+id/edit_position"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:hint="输入记录位置"
+                        android:textSize="17sp"
+                        android:textColor="@color/colorGray"
+                        android:background="@null"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
                 </LinearLayout>
-                <RadioGroup
-                    android:id="@+id/group_weather"
-                    android:layout_margin="5dp"
-                    android:orientation="horizontal"
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
-                    <android.support.v7.widget.AppCompatRadioButton
-                        android:id="@+id/weather_default"
-                        android:textColor="@color/colorGray"
-                        android:text="晴"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                    <android.support.v7.widget.AppCompatRadioButton
-                        android:textColor="@color/colorGray"
-                        android:text="雨"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                    <android.support.v7.widget.AppCompatRadioButton
-                        android:textColor="@color/colorGray"
-                        android:text="风"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                    <android.support.v7.widget.AppCompatRadioButton
-                        android:textColor="@color/colorGray"
-                        android:text="云"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                    <android.support.v7.widget.AppCompatRadioButton
-                        android:textColor="@color/colorGray"
-                        android:text="雾"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                    <android.support.v7.widget.AppCompatRadioButton
-                        android:textColor="@color/colorGray"
-                        android:text="阴"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                </RadioGroup>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_marginLeft="5dp"
+                            android:layout_gravity="bottom"
+                            android:textColor="@color/colorPrimary"
+                            android:text="天气"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <RadioGroup
+                        android:id="@+id/group_weather"
+                        android:layout_margin="5dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/weather_default"
+                            android:textColor="@color/colorGray"
+                            android:text="晴"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:textColor="@color/colorGray"
+                            android:text="雨"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:textColor="@color/colorGray"
+                            android:text="风"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:textColor="@color/colorGray"
+                            android:text="云"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:textColor="@color/colorGray"
+                            android:text="雾"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:textColor="@color/colorGray"
+                            android:text="阴"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RadioGroup>
 
-            </LinearLayout>
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_marginRight="15dp"
-                android:layout_marginLeft="15dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:layout_gravity="bottom"
-                        android:layout_marginLeft="5dp"
-                        android:textColor="@color/colorPrimary"
-                        android:text="心情"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
                 </LinearLayout>
-                <RadioGroup
-                    android:id="@+id/group_mood"
-                    android:layout_margin="5dp"
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <android.support.v7.widget.AppCompatRadioButton
-                        android:id="@+id/mood_default"
-                        android:textColor="@color/colorGray"
-                        android:text="开心"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                    <android.support.v7.widget.AppCompatRadioButton
-                        android:textColor="@color/colorGray"
-                        android:text="一般"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                    <android.support.v7.widget.AppCompatRadioButton
-                        android:textColor="@color/colorGray"
-                        android:text="糟糕"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                </RadioGroup>
-            </LinearLayout>
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_marginRight="15dp"
-                android:layout_marginLeft="15dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
                 <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
-                    <TextView
-                        android:layout_marginLeft="5dp"
-                        android:layout_gravity="bottom"
-                        android:textColor="@color/colorPrimary"
-                        android:text="标签"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/colorPrimary"
+                            android:text="心情"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <RadioGroup
+                        android:id="@+id/group_mood"
+                        android:layout_margin="5dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/mood_default"
+                            android:textColor="@color/colorGray"
+                            android:text="开心"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:textColor="@color/colorGray"
+                            android:text="一般"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:textColor="@color/colorGray"
+                            android:text="糟糕"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RadioGroup>
                 </LinearLayout>
-                <com.zhy.view.flowlayout.TagFlowLayout
-                    android:layout_margin="5dp"
-                    android:id="@+id/id_flowlayout"
-                    zhy:max_select="-1"
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
-                </com.zhy.view.flowlayout.TagFlowLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_marginLeft="5dp"
+                            android:layout_gravity="bottom"
+                            android:textColor="@color/colorPrimary"
+                            android:text="标签"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <com.zhy.view.flowlayout.TagFlowLayout
+                        android:layout_margin="5dp"
+                        android:id="@+id/id_flowlayout"
+                        zhy:max_select="-1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </com.zhy.view.flowlayout.TagFlowLayout>
+                </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
-    </ScrollView>
-
+    </android.support.v7.widget.CardView>
 </RelativeLayout>
