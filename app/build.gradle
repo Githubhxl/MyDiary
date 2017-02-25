@@ -1,15 +1,16 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 24
+    compileSdkVersion 25
     buildToolsVersion "24.0.2"
     defaultConfig {
         applicationId "com.nexuslink.mydiary"
-        minSdkVersion 19
-        targetSdkVersion 24
+        minSdkVersion 14
+        targetSdkVersion 25
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
         release {
@@ -24,17 +25,21 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:24.2.1'
-    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:25.1.1'
     compile 'info.hoang8f:android-segmented:1.0.6'
-    compile 'com.android.support:design:25.0.1'
-    compile 'com.jakewharton:butterknife:8.4.0'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
-    compile 'com.ashokvarma.android:bottom-navigation-bar:1.2.0'
-    compile 'com.android.support:cardview-v7:25.0.1'
-    compile 'de.hdodenhof:circleimageview:2.1.0'
-    compile 'com.yanzhenjie:recyclerview-swipe:1.0.2'
-    compile 'com.kaopiz:kprogresshud:1.0.5'
-    compile 'com.bigkoo:alertview:1.0.3'
+    compile 'com.android.support:design:25.1.1'
+    compile 'com.android.support:cardview-v7:25.1.1'
+    compile 'com.jakewharton:butterknife:8.5.1'
+    compile 'com.android.support:support-v4:25.1.1'
     compile 'com.zhy:flowlayout-lib:1.0.3'
+    compile 'com.android.support:support-vector-drawable:25.1.1'
+    testCompile 'junit:junit:4.12'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    compile 'com.zzhoujay.richtext:richtext:2.3.7'
+    compile 'com.zzhoujay.glideimagegetter:glideimagegetter:1.0.1'
+    compile 'com.github.jaouan:compoundlayout:1.0.1'
+
+    compile 'com.facebook.stetho:stetho:1.3.1'
+    compile 'com.facebook.stetho:stetho-okhttp3:1.3.1'
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
 }

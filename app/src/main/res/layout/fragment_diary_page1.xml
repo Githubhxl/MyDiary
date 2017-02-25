@@ -1,0 +1,115 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.nexuslink.mydiary.Fragments.DiaryFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_marginRight="3dp"
+        android:scrollbarSize="4.5dp"
+        android:scrollbarThumbVertical="@color/colorPrimary"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center"
+                android:id="@+id/diary_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:hint="开始记录日记"
+                android:background="@null"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginLeft="12dp"
+                android:lineSpacingExtra="10dp"
+                android:textSize="17sp"
+                android:textColor="@color/colorGray"
+                android:id="@+id/edit_diary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+    <android.support.v7.widget.CardView
+        android:visibility="gone"
+        android:id="@+id/no_entries_card"
+        app:cardCornerRadius="15dp"
+        android:layout_marginTop="125dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="280dp"
+        android:layout_height="130dp">
+        <TextView
+            android:layout_marginTop="8dp"
+            android:textSize="35sp"
+            android:layout_gravity="center_horizontal"
+            android:text="NO Entries"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </android.support.v7.widget.CardView>
+
+    <!--<android.support.v7.widget.CardView
+        android:id="@+id/add_diary"
+        android:elevation="0dp"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="15dp"
+        app:cardBackgroundColor="@color/colorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="16sp"
+            android:text="@string/create_diary"
+            android:textColor="@android:color/white"
+            android:padding="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </android.support.v7.widget.CardView>-->
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_no_diary"
+        app:cardElevation="3dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginLeft="45dp"
+        app:cardCornerRadius="15dp"
+        android:layout_marginTop="125dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="135dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginTop="8dp"
+                android:textSize="35sp"
+                android:layout_gravity="center_horizontal"
+                android:text="NO Diary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginTop="12dp"
+                android:layout_gravity="center_horizontal"
+                android:text="还没有日记"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/add_diary"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center_horizontal"
+                android:text="创建新的日记"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>
+

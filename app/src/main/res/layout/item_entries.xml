@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/month"
+        android:textSize="45sp"
+        android:textColor="@color/colorGray"
+        android:text="2"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_diary"
+        app:cardCornerRadius="4dp"
+        android:layout_marginBottom="13dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="93dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimary"
+                    android:id="@+id/diary_date"
+                    android:textSize="50dp"
+                    android:text="18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/diary_weekday"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15sp"
+                    android:text="Fri"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="13sp"
+                    android:layout_marginTop="12dp"
+                    android:id="@+id/diary_time"
+                    android:text="12:00"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:maxLines="1"
+                    android:id="@+id/diary_title"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp"
+                    android:text="Diary Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:maxLines="1"
+                    android:id="@+id/diary_content"
+                    android:textColor="@color/colorGray"
+                    android:textSize="12sp"
+                    android:text="My Diary content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_weight="0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@drawable/weather_cloud"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp" />
+                    <ImageView
+                        android:src="@drawable/mood_soso"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp" />
+                    <ImageView
+                        android:src="@drawable/bookmark"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="15dp"
+                        android:layout_height="20dp" />
+                </LinearLayout>
+                <ImageView
+                    android:layout_marginTop="12dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/rec"
+                    android:layout_width="21dp"
+                    android:layout_height="21dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

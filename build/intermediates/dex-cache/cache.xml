@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rye\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife-annotations\8.5.1\bb67dad90bab7cd77a8f7f1b8442b47e3a2326bc\butterknife-annotations-8.5.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="bb67dad90bab7cd77a8f7f1b8442b47e3a2326bc">
+        <dex dex="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\transforms\dex\debug\folders\1000\10\butterknife-annotations-8.5.1_ab6d446fc5a8da946795df04d0e383ecf4cb5d1f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\exploded-aar\com.github.jaouan\compoundlayout\1.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="6987d9e6dc550dd9681768b2690ff40137086b26">
+        <dex dex="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.jaouan-compoundlayout-1.0.1_915223618420c8f4767cacd6f0e5ce9946e8b5bd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="02741d05d4b697fba5e279e9881aaa1da0ca7c7f">
+        <dex dex="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-25.1.1_fec585f32072275b2baf93251213c07ca2d4ce35\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="0d191c1a09e4892d059e5ce749e4ad4e08129e35">
+        <dex dex="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-25.1.1_e72db29c53c8cab23a2a454de419352b9de84bff\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rye\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.11.0\840897fcd7223a8143f1d9b6f69714e7be34fd50\okio-1.11.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="840897fcd7223a8143f1d9b6f69714e7be34fd50">
+        <dex dex="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\transforms\dex\debug\folders\1000\10\okio-1.11.0_6040ee3d731890bea6e3a2246334b2cc8981fcd7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="3e04ac8ca644ea7baddf6fdcf72e15c79e9df94a">
+        <dex dex="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-25.1.1_5a41f685b48c9b59af0d5418be8e33afa58a4279\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="c9649557905bf7a80fca9e0d54cbcb7662627860">
+        <dex dex="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-25.1.1_84f50cf63b0410123123c7d5fcbae2a8f96c3251\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rye\.gradle\caches\modules-2\files-2.1\com.facebook.stetho\stetho\1.3.1\2c4076b466a0eb4d6ddf5721edd35cd1adc1f317\stetho-1.3.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="2c4076b466a0eb4d6ddf5721edd35cd1adc1f317">
+        <dex dex="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\transforms\dex\debug\folders\1000\10\stetho-1.3.1_b54307baccd4a7a7bd9f4868b3b3015e1a30ff3d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rye\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\25.1.1\support-annotations-25.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="b59b6ee8d6ecc03e672d253800430343493a6ed8">
+        <dex dex="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.1.1_f9877badb2f89548ab72d679ab2ad1c52124254a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\exploded-aar\com.android.support\design\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="cd7951e04cfb9a8bf008d544a478d9a8d8192d38">
+        <dex dex="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-25.1.1_907f84e280ee9015ed3294a3950942584016fe47\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\exploded-aar\com.android.support\transition\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="15b049fedbd8e3926bf99d9e45dfc9b2a1043bb9">
+        <dex dex="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-transition-25.1.1_b2aab0b756df774498b0a7487afad1703c9dd3e6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\exploded-aar\com.zhy\flowlayout-lib\1.0.3\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="fdaede6c3d2da36ba042f9db05a60d303e04045f">
+        <dex dex="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.zhy-flowlayout-lib-1.0.3_695a0ba65935be710f9df0993b81a8eba334e7d5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rye\.gradle\caches\modules-2\files-2.1\com.facebook.stetho\stetho-okhttp3\1.3.1\c596b3b33b5a92107bb70544bb5ee35f597bc6d8\stetho-okhttp3-1.3.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="c596b3b33b5a92107bb70544bb5ee35f597bc6d8">
+        <dex dex="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\transforms\dex\debug\folders\1000\10\stetho-okhttp3-1.3.1_deb21408bb5222b2d4de2787193755f08fef3b2c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\exploded-aar\com.jakewharton\butterknife\8.5.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="19f281a785ca0eb5f6799fc7bf7ca199a9ca1e8b">
+        <dex dex="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.jakewharton-butterknife-8.5.1_8074a5244b828067cd7cb24baa064c8c32850a06\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\exploded-aar\com.zzhoujay.richtext\richtext\2.3.7\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="41f0090e7aa5cc1d239d12b64fcf30ce74eb78ea">
+        <dex dex="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.zzhoujay.richtext-richtext-2.3.7_44cd92fce9d9ede52eaaaa2a7b3c8d724b8a05ae\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-25.1.1_07e1330cfa3300de8d8b592ed8ac308402ea32a8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="a8ae156c2726ac9c56daaf4b49452ec2cdb7bba9">
+        <dex dex="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-cardview-v7-25.1.1_d01cee112942cbf58d291dce6afdcdeca7d3d262\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="57b997b95ae277cf483236a1df2a59bbe9a60694">
+        <dex dex="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_87aea781fd94ffb83a38f2086162f89748a303f9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="e2719c102dca3a7a5b02ce07f769362da6ddb4ab">
+        <dex dex="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-25.1.1_fb490f18c84bbb4a7ffe927f7d50ac7ca7ac7a4f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\exploded-aar\com.zzhoujay.glideimagegetter\glideimagegetter\1.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="aae4c89a9df05cbc7601a15c2173893c00b0e010">
+        <dex dex="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.zzhoujay.glideimagegetter-glideimagegetter-1.0.1_4329149b9f5f998dd8ee4a27d3d02a4fb90e7ea7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="7bde4c34162092e0a77e7f12dc85ed77c484cf5c">
+        <dex dex="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.1.1_5803c5e81c716a78745f36563cc7c434343981d0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d429e619f702a7bfed84d6832483f7b9d61c98ad">
+        <dex dex="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_44507b4d2c6bdc990b2fca128df990c3eaad1bd7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rye\.gradle\caches\modules-2\files-2.1\commons-cli\commons-cli\1.2\2bf96b7aa8b611c177d329452af1dc933e14501c\commons-cli-1.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="2bf96b7aa8b611c177d329452af1dc933e14501c">
+        <dex dex="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\transforms\dex\debug\folders\1000\10\commons-cli-1.2_139d95510d32dd397dcbb01f59edbff47d479e47\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="c03bf57f358aa10d253f21989e93bcf6014b3b17">
+        <dex dex="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-25.1.1_fc2d6b1455c2435b5edd9cad794db8962c626e65\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rye\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.7.0\9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4\glide-3.7.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
+        <dex dex="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\transforms\dex\debug\folders\1000\10\glide-3.7.0_1c6b508a6593d9a333fdbdee272d7d0df8d1db42\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="ecb496cc08dd52551fc5ec6db3bc0632e95a89bb">
+        <dex dex="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-25.1.1_d8d8c3ba63febd3c87c28e1345b211e8b987cf7f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rye\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\2.0.1\516c03b21d50a644d538de0f0369c620989cd8f0\jsr305-2.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="516c03b21d50a644d538de0f0369c620989cd8f0">
+        <dex dex="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\transforms\dex\debug\folders\1000\10\jsr305-2.0.1_ee150617377f30440b875a45282487e032968f1d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\exploded-aar\info.hoang8f\android-segmented\1.0.6\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="692a913dff3246e0cc5369c2508f5970ecfeca01">
+        <dex dex="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\transforms\dex\debug\folders\1000\10\info.hoang8f-android-segmented-1.0.6_0d3755e3d974a2732ff94232fcf45b34ec2af91e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rye\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.5.0\4b0bb6bfbecbdd42b97ff400af342bfe7f32bc83\okhttp-3.5.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="4b0bb6bfbecbdd42b97ff400af342bfe7f32bc83">
+        <dex dex="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\transforms\dex\debug\folders\1000\10\okhttp-3.5.0_54adddfad2bd2bf73b00b969aceb5d6510a93027\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\exploded-aar\com.zzhoujay.markdown\markdown\1.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="dd2cb280c0fb2f5d8d705462c7b08a7f5ad4566c">
+        <dex dex="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.zzhoujay.markdown-markdown-1.0.2_47d8ac65026da934ea7f3ae55753c63f5857c586\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="0fb891e8f0cfba0513043a7bb357513d229ca2cd">
+        <dex dex="C:\Users\Rye\Desktop\GitProject\myDiary\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-25.1.1_1907f5648fac520188661b54aac8f682223620d2\classes.dex" />
+    </item>
+
+</items>

@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.nexuslink.mydiary.Fragments.DiaryFragment">
+
+    <android.support.v4.view.ViewPager
+        android:layout_weight="1"
+        android:id="@+id/diary_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v4.view.ViewPager>
+    <LinearLayout
+        android:layout_weight="0"
+        android:background="@drawable/navishadow"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/clear"
+            android:src="@drawable/clear"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+        <!--<ImageView
+            android:id="@+id/super_line"
+            android:src="@drawable/superline"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />-->
+
+        <ImageView
+            android:id="@+id/add_pic"
+            android:src="@drawable/camera"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+
+        <ImageView
+            android:id="@+id/finish"
+            android:src="@drawable/finish"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,31 +1,42 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="DialogTheme" parent="@android:style/Theme.Dialog">
+    <style name="MainTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="colorPrimaryDark">@android:color/white</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+    <style name="WelcomeTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+    </style>
 
-        <!-- 边框 -->
-        <item name="android:windowFrame">@null</item>
-        <!-- 是否浮现在activity之上 -->
-        <item name="android:windowIsFloating">true</item>
-        <!-- 半透明 -->
-        <item name="android:windowIsTranslucent">false</item>
-        <!-- 无标题 -->
-        <item name="android:windowNoTitle">true</item>
-        <!-- 背景透明 -->
+    <style name="MyDialog" parent="android:style/Theme.Dialog">
+        <!--背景颜色及和透明程度-->
         <item name="android:windowBackground">@android:color/transparent</item>
-        <!-- 模糊 -->
+        <!--是否去除标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否去除边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否模糊-->
         <item name="android:backgroundDimEnabled">true</item>
     </style>
 
-    <style name="MyTheme.SpinnerAppTheme" parent="Widget.AppCompat.Spinner">
-        <item name="android:textColor">@android:color/white</item>
-        <item name="android:textSize">14sp</item>
+    <style name="DialogTransparent" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimaryDark">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
     </style>
 </resources>

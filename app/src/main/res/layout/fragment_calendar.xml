@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nexuslink.mydiary.Fragments.CalendarFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/hello_blank_fragment" />
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/navishadow"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageView
+            android:id="@+id/menu_calendar"
+            android:src="@drawable/menu"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_width="21dp"
+            android:layout_height="21dp" />
+
+        <ImageView
+            android:id="@+id/edit"
+            android:src="@drawable/add"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_width="19dp"
+            android:layout_height="19dp" />
+
+        <ImageView
+            android:id="@+id/camera"
+            android:src="@drawable/camera"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_width="21dp"
+            android:layout_height="21dp" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/dialog_up"
+            android:background="@drawable/my_dialog_bg_up"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/title_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:gravity="center"
+                android:text="Title"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/dialog_message"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/title1"
+                android:textSize="15sp"
+                android:textColor="@android:color/white"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="5dp"
+                android:text="Title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+              <EditText
+                  android:id="@+id/view1_dialog"
+                  android:layout_marginRight="10dp"
+                  android:layout_marginLeft="10dp"
+                  android:layout_marginBottom="15dp"
+                  android:background="@null"
+                  android:textColor="@android:color/white"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/title2"
+                android:textSize="15sp"
+                android:textColor="@android:color/white"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="5dp"
+                android:text="Title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/view2_dialog"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="15dp"
+                android:background="@null"
+                android:textColor="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+            <LinearLayout
+                android:background="@drawable/my_dialog_bg_down"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/no"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="取消"
+                    android:textColor="@color/colorGray"
+                    android:textSize="16sp" />
+
+                <View
+                    android:background="@color/colorPrimary"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    />
+
+                <Button
+                    android:id="@+id/yes"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="创建"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp" />
+            </LinearLayout>
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

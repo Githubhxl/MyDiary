@@ -4,17 +4,14 @@
     android:id="@+id/activity_welcome"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.nexuslink.mydiary.view.WelcomeActivity">
+    android:background="@color/colorPrimary"
+    tools:context="com.nexuslink.mydiary.Activities.WelcomeActivity">
+
     <ImageView
-        android:src="@color/colorfacebookBlue"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
-    <ImageView
-        android:layout_centerInParent="true"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
         android:src="@drawable/logo"
-        android:layout_width="250dp"
-        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
         />
 
 </RelativeLayout>
