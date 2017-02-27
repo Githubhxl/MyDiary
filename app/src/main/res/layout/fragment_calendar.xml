@@ -5,10 +5,13 @@
     tools:context="com.nexuslink.mydiary.Fragments.CalendarFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:id="@+id/calendar_parent"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
+
+    </LinearLayout>
     <LinearLayout
         android:layout_alignParentBottom="true"
         android:background="@drawable/navishadow"
